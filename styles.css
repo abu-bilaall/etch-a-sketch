@@ -1,0 +1,25 @@
+body {
+    margin: 0px auto;
+    padding: 0px;
+}
+
+.old-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 400px;
+    height: 400px;
+    margin: 50px;
+}
+
+.grid {
+    height: 25px;
+    width: 25px;
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    border: grey solid 1px;
+}
+
+.hover {
+    background-color: black;
+}
