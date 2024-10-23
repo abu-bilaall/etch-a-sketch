@@ -29,7 +29,7 @@ let defaultWidth = 800;
 generateBtn.addEventListener('click', () => {
     userDimension = +prompt("Enter a grid dimension below (Max. 100)");
 
-    if (userDimension > 100) {
+    if (userDimension > 100 || !userDimension) {
         console.log("Sorry. The maximum dimension is 100.");
     } else {
         grid = userDimension * userDimension;
@@ -55,6 +55,6 @@ generateBtn.addEventListener('click', () => {
 refreshBtn.addEventListener('click', () => {
     let sketches = document.querySelectorAll('.grid');
     sketches.forEach(sketch => {
-        sketch.classList.add('clear-grid');
+        sketch.classList.remove('hover');
     });
 });
