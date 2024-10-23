@@ -1,16 +1,13 @@
-// body
+// sketchFrame and buttons
 const body = document.querySelector('body');
-
-// Grid generator button
-const btn = document.createElement('button');
-btn.classList.add('generate-button');
-btn.textContent = 'Generate a new grid';
-body.appendChild(btn);
+const sketchFrame = document.querySelector('.sketch-frame');
+const generateBtn = document.querySelector('.generate-button');
+const refreshBtn = document.querySelector('.refresh');
 
 // default container
 const container = document.createElement('div');
 container.classList.add('grid-container');
-body.appendChild(container);
+sketchFrame.appendChild(container);
 
 // default grid generator
 let grid = 16 * 16;
@@ -29,7 +26,7 @@ container.addEventListener('mouseover', (event) => {
 // generating user-specified grid
 let userDimension;
 let defaultWidth = 800;
-btn.addEventListener('click', () => {
+generateBtn.addEventListener('click', () => {
     userDimension = +prompt("Enter a grid dimension below (Max. 100)");
 
     if (userDimension > 100) {
@@ -52,4 +49,12 @@ btn.addEventListener('click', () => {
             grid--;
         };
     }
+});
+
+// clearing the sketch pad
+refreshBtn.addEventListener('click', () => {
+    let sketches = document.querySelectorAll('.grid');
+    sketches.forEach(sketch => {
+        sketch.classList.add('clear-grid');
+    });
 });

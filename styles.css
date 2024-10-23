@@ -5,6 +5,7 @@ body {
 
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: whitesmoke;
+    color: rgb(90, 52, 5);
 
     display: flex;
     flex-direction: column;
@@ -12,7 +13,7 @@ body {
     align-items: center;
 }
 
-.generate-button {
+.generate-button, .refresh {
     width: 200px;
     height: 50px;
     border: none;
@@ -20,13 +21,24 @@ body {
     font-size: 18px;
     font-weight: 700;
     background-color: white;
+    color: rgb(90, 52, 5);
+}
+
+.refresh {
+    margin-left: 20px;
+}
+
+.sketch-frame {
+    padding: 20px;
+    margin: 30px;
+    border-radius: 16px;
+    background-color: rgb(90, 52, 5);
 }
 
 .grid-container {
     display: flex;
     flex-wrap: wrap;
     width: 800px;
-    margin: 30px;
 
     background-color: white;
 }
@@ -37,9 +49,13 @@ body {
     box-sizing: border-box;
     margin: 0px;
     padding: 0px;
-    border: grey solid 1px;
+    border: whitesmoke solid 1px;
 }
 
 .hover {
-    background-color: black;
+    background-color: bisque;
+}
+
+.clear-grid {
+    background-color: white;
 }
